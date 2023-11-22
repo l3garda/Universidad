@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  microservicio:
+    container_name: microservicio
+    image: microservicio:v1
+    build:
+      context: .
+    ports:
+      - "4002:4002"
+    networks:
+      - app-network
+
+networks:
+  app-network:
